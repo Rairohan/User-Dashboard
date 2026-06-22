@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { ExpenseContext } from "./ExpenseContext"
+import { ExpenseContext } from "./../Context/ExpenseContent";
 
 export default function AddExpense(){
   const { dispatch } = useContext(ExpenseContext)
