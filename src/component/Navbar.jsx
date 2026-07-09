@@ -7,7 +7,7 @@ export default function Navbar(){
         <h1 className="text-5xl">💰 Expense Tracker</h1>
         <div className='flex items-center gap-4'>
             <p className='p-2'>Expenses: {state.expenses.length}</p>
-            <p className='p- 2'>Theme: {state.theme}</p>
+            <p className='p-2'>Theme: {state.theme}</p>
             <button 
                 className='bg-white text-blue-800 px-3 py-1 rounded-md hover:bg-gray-300 transition duration-400 hover:text-blue hover:scale-105' 
                 onClick={() => dispatch({ type: "toggleTheme" })}>

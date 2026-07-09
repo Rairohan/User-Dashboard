@@ -5,7 +5,7 @@ export const ExpenseContext = createContext()
 const initialState = {
   expenses: [],
   budget: 10000,
-  theme: "light"
+  theme: "Light"
 }
 
 function reducer(state, action) {
@@ -13,7 +13,7 @@ function reducer(state, action) {
     case "add":         return { ...state, expenses: [...state.expenses, action.payload] }
     case "remove":      return { ...state, expenses: state.expenses.filter(e => e.id !== action.payload) }
     case "clear":        return { ...state, expenses: [] }
-    case "toggleTheme":  return { ...state, theme: state.theme === "light" ? "dark" : "light" }
+    case "toggleTheme":  return { ...state, theme: state.theme === "light" ? "Dark" : "Light" }
     default:             return state
   }
 }
