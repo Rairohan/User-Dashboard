@@ -13,7 +13,7 @@ function reducer(state, action) {
     case "add":         return { ...state, expenses: [...state.expenses, action.payload] }
     case "remove":      return { ...state, expenses: state.expenses.filter(e => e.id !== action.payload) }
     case "clear":        return { ...state, expenses: [] }
-    case "toggleTheme":  return { ...state, theme: state.theme === "light" ? "Dark" : "Light" }
+    case "toggleTheme":  return { ...state, theme: state.theme === "Light" ? "Dark" : "Light" }
     default:             return state
   }
 }

@@ -6,12 +6,12 @@ const ExpenseItem = React.memo(function ExpenseItem({expense})
 {
     const {dispatch} = useContext(ExpenseContext)
     return(
-        <div className="bg-gray-200 m-4 flex justify-center p-4 rounded-xl gap-4 text-2xl">
-            <p>{expense.title}</p>
-            <p>{expense.amount}</p>
-            <p>{expense.category}</p>
+        <div className="bg-gray-200 m-4 flex justify-between items-center  p-4 rounded-xl  text-2xl max-w-3xl w-full mx-auto">
+            <p> <span className="font-bold text-3xl">Title: </span>{expense.title}</p>
+            <p> <span className="font-bold text-3xl">Amount: </span>{expense.amount}</p>
+            <p> <span className="font-bold text-3xl">Category: </span>{expense.category}</p>
             <button 
-            className="bg-red-500 p-1 rounded-xl text-white"
+            className="bg-red-500 p-2 rounded-xl text-white hover:bg-red-800"
             onClick={()=>dispatch({type:"remove",payload:expense.id})}>Delete</button>
         </div>
     )
